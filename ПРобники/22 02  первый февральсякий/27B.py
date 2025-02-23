@@ -14,7 +14,6 @@ for x, y in ponts:
         clas[2].append([x, y])
     else:
         clas[1].append([x,y])
-# penup()
 # # print(clas)
 # tracer(0)
 # color = ['blue', 'green', 'black']
