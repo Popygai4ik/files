@@ -55,5 +55,6 @@ p_s = int(sum([len(cl)/16 for cl in clusters])*1000)
 print(y1, p_s)
 
 visila(clusters)
+
 visila2(best)
 done()
