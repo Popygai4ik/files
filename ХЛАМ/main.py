@@ -146,7 +146,24 @@
 #         maxi = max(maxi, data[i] + data[i + 1])
 #
 # print(c, maxi)
-from sympy.solvers import solve
-from sympy import Symbol
-x = Symbol('x')
-print(solve(x**2 - 3*x + 2, x)) # Пример
+def dell(n,m):
+    return n % m == 0
+def bibi(n):
+    s = bin(n)[-1]
+    return s == '0'
+for a in range(1,1000):
+    for x in range(1,10000):
+        if ((dell(a,256) and (not(not(bibi(a)) or ((dell(a,x)) and (not(bibi(x)))))))):
+            break
+    else:
+        print(a)
+
+#
+# p = list(range(27, 130+1))
+# q = list(range(50, 62+1))
+# r = list(range(38, 94+1))
+# a = []
+# for x in range(1,200):
+#     if (((x not in p) or (x in q)) or ((not(x in a)) <= (not(x in r)))) == False:
+#         a.append(x)
+# print(a)
