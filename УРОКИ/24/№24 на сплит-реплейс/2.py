@@ -1,0 +1,5 @@
+f = open('24_2_dz.txt')
+s = f.readline()
+s = s.split('Y')
+print(max(s,key=len))
+print(len(max(s,key=len)))

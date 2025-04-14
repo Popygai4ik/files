@@ -1,6 +1,6 @@
 import math
 
-f = open('27A.txt')
+f = open('27B.txt')
 f.readline()
 from main import *
 from turtle import *
@@ -15,7 +15,7 @@ while points:
             if math.dist(p1,p2)<eps:
                 classters[-1].append(p2)
                 points.remove(p2)
-
+ris(classters)
 min_res = 10**10
 max_res = 0
 for i in range(len(classters)):
@@ -25,4 +25,5 @@ for i in range(len(classters)):
                 min_res = min(min_res, math.dist(p1,p2))
                 max_res = max(max_res, math.dist(p1, p2))
 print((int((max_res) *10000)),int((min_res)*10000))
-# 81383 24534
+# 81383 24534101795 8280
+done()

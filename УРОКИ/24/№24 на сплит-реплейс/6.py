@@ -1,0 +1,6 @@
+f = open('24_6 дз.txt')
+s = f.readline()
+s = s.replace('YYZX', 'YYZ YZX')
+res = s.split()
+print(max(res,key=len))
+print(len(max(res,key=len)))

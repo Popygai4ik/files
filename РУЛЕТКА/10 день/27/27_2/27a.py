@@ -1,9 +1,9 @@
 import math
 
 f = open('27A.txt')
-f.readline()
 from main import *
 from turtle import *
+f.readline()
 points = [list(map(float, s.replace(',','.').split())) for s in f]
 classters = []
 eps = 0.5
@@ -12,17 +12,20 @@ while points:
     del points[0]
     for p1 in classters[-1]:
         for p2 in points[:]:
-            if math.dist(p1,p2)<eps:
+            if math.dist(p1,p2) < eps:
                 classters[-1].append(p2)
                 points.remove(p2)
-
-min_res = 10**10
-max_res = 0
+best = [[] for _ in range(len(classters))]
 for i in range(len(classters)):
+    minin = 10**10
     for p1 in classters[i]:
-        for j in range(i + 1, len(classters)):
-            for p2 in classters[j]:
-                min_res = min(min_res, math.dist(p1,p2))
-                max_res = max(max_res, math.dist(p1, p2))
-print((int((max_res) *10000)),int((min_res)*10000))
-# 81383 24534
+        R = 0
+        for p2 in classters[i]:
+            R+= math.dist(p1,p2)
+        if R < minin:
+            minin = R
+            best[i] = p1
+p_x = int((sum(x for x,y in best) / len(best))*10000)
+p_y = int((sum(y for x,y in best) / len(best))*10000)
+print(p_x,p_y)
+# -11985 -4477
