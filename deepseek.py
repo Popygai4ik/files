@@ -24,6 +24,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_message = update.message.text
 
     try:
+        await update.message.reply_text(
+            "Жди я работаю........"
+        )
         # Используем g4f для получения ответа от ИИ
         response = await g4f.ChatCompletion.create_async(
             model=g4f.models.gpt_4,
