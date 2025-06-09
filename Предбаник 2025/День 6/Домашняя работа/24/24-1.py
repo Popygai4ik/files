@@ -3,7 +3,7 @@ s = f.readline()
 s = s.replace('A', 'B')
 s = s.replace('C', 'B')
 s = s.replace('8', '9')
-# print(s)
+print(s)
 res = []
 buff = ''
 for x in s:
