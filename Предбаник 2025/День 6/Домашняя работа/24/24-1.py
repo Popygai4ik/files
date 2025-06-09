@@ -10,7 +10,7 @@ for x in s:
     if len(buff) == 0:
         buff += x
     elif len(buff) > 0 and buff[-1] != x:
-        buff += x
+        buff +=x
     else:
         res.append(buff)
         buff = ''
